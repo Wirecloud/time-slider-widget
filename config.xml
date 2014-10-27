@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template xmlns="http://wirecloud.conwet.fi.upm.es/ns/template#">
+    <Catalog.ResourceDescription>
+        <Vendor>CoNWeT</Vendor>
+        <Name>TimeSlider</Name>
+        <DisplayName>Time Slider</DisplayName>
+        <Author>jserrano@conwet.com, sblanco@conwet.com</Author>
+        <Version>1.3.0</Version>
+        <Mail>wirecloud@conwet.com</Mail>
+        <Description>Do not find what you want? Use the time slider to filter your searches!</Description>
+        <ImageURI>images/catalogue.png</ImageURI>
+        <iPhoneImageURI>images/catalogueSmartphone.png</iPhoneImageURI>
+    </Catalog.ResourceDescription>
+    <Platform.Preferences>
+        <Preference
+            name="clustering"
+            type="boolean"
+            description="Check it if you want clusters in your timeLine"
+            label="Clustering"
+            default="true">
+        </Preference>
+        <Preference
+            name="time"
+            type="text"
+            description="Set the time you want to see info/warning/error text"
+            label="Text time"
+            default="4">
+        </Preference>
+    </Platform.Preferences>
+    <Platform.Wiring>
+        <InputEndpoint
+            name="markInsertInput"
+            type="text"
+            description="Insert a mark to show in the timeLine"
+            label="Insert mark"
+            action_label=" Insert Mark into TimeLine"
+            friendcode="mark" />
+        <InputEndpoint
+            name="markSelectInput"
+            type="text"
+            description="Select a showed mark in the timeLine"
+            label="Select mark"
+            action_label="Select a Mark from TimeLine"
+            friendcode="mark" />
+        <InputEndpoint
+            name="markDeleteInput"
+            type="text"
+            description="Delete an existing mark in the timeLine"
+            label="Delete mark"
+            action_label="Delete Mark from TimeLine"
+            friendcode="mark" />
+        <OutputEndpoint
+            name="timeIntervalOutput"
+            type="text"
+            description="Send a timestamp via wiring to be used as a temporary filter."
+            label="Time Interval"
+            friendcode="timeInterval" />
+        <OutputEndpoint
+            name="selectedMarkOutput"
+            type="text"
+            description="Send the current selected mark in the Time Slider."
+            label="Selected mark"
+            friendcode="mark" />
+    </Platform.Wiring>
+    <Platform.Link>
+        <XHTML href="index.html" contenttype="text/html" cacheable="false" use-platform-style="true"/>
+    </Platform.Link>
+    <Platform.Rendering width="10" height="30"/>
+</Template>

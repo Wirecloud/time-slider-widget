@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: auto;
+}
+
+#timeSlider {
+    margin: 5px;
+}
+
+#controlPanel {
+    margin: 15px;
+}
+
+i{
+    margin: 0 5px;
+}
+
+div div.styled_text_field {
+    display: inline-block;
+    width: auto;
+}
+
+.shadow {
+    opacity: 0.5;
+}
+
+.imageHidden img {
+    display: none;
+}
+
+img {
+    display: block;
+}
+
+input[type*=date], input[type*=time] {
+    width: auto;
+    margin: 3px;
+}
+
+label {
+    display:inline;
+}
+
+#errorBoard {
+    -webkit-transition: opacity linear 1000ms, margin linear 1000ms, padding linear 1000ms, border linear 1000ms, height linear 1000ms;
+    -moz-transition: opacity linear 1000ms, margin linear 1000ms, padding linear 1000ms, border linear 1000ms, height linear 1000ms;
+    -o-transition: opacity linear 1000ms, margin linear 1000ms, padding linear 1000ms, border linear 1000ms, height linear 1000ms;
+}
+
+.msgHide {
+    opacity:0;
+    margin:0;
+    padding:0;
+    border:0;
+    height:0;
+}
