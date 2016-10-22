@@ -177,21 +177,21 @@
 
     var setControlPanel = function setControlPanel() {
         // Set now button
-        var nowButton = new StyledElements.StyledButton({
+        var nowButton = new StyledElements.Button({
             text: 'Show Now'
         });
         nowButton.addEventListener("click", handlerNowButton.bind(this), false);
         nowButton.insertInto(this.controlPanel);
 
         // set show all button
-        var showAllButton = new StyledElements.StyledButton({
+        var showAllButton = new StyledElements.Button({
             text: 'Show Interval'
         });
         showAllButton.addEventListener("click", handlerShowAllButton.bind(this), false);
         showAllButton.insertInto(this.controlPanel);
 
         // set 24H button
-        var show24h = new StyledElements.StyledButton({
+        var show24h = new StyledElements.Button({
             text: '24H'
         });
         show24h.addEventListener("click", handlerShow24h.bind(this), false);
