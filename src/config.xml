@@ -7,6 +7,9 @@
     <smartphoneimage>images/catalogueSmartphone.png</smartphoneimage>
     <description>Do not find what you want? Use the time slider to filter your searches!</description>
     <authors>jserrano@conwet.com, sblanco@conwet.com</authors>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <changelog>doc/changelog.md</changelog>
+    <doc>doc/userguide.md</doc>
   </details>
   <requirements>
       <feature name="StyledElements"/>

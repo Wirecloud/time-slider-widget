@@ -1,3 +1,1 @@
-This widget allows you to [...]
-
-## References
+Do not find what you want? Use the time slider to filter your searches!

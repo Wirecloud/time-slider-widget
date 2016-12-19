@@ -1,6 +1,6 @@
 ## Introduction
 
-The best project ever.
+Do not find what you want? Use the time slider to filter your searches!
 
 ## Settings
 

@@ -1,6 +1,6 @@
-# My project name widget
+# Time Slider Widget
 
-The My project name widget is a WireCloud widget that provides ...
+Do not find what you want? Use the time slider to filter your searches!
 
 ## Build
 
