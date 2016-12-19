@@ -35,16 +35,16 @@
  *
  */
 
-/*jshint browser:true white:true*/
-/*global links MashupPlatform StyledElements*/
+/* jshint browser:true white:true*/
+/* globals TimeSlider links MashupPlatform StyledElements*/
 
 (function () {
 
     "use strict";
 
-    /******************************************************************************/
-    /********************************* PUBLIC *************************************/
-    /******************************************************************************/
+    /** ****************************************************************************/
+    /** ******************************* PUBLIC *************************************/
+    /** ****************************************************************************/
 
     var TimeSlider = function TimeSlider(idContainer) {
         this.idContainer = idContainer;
@@ -106,9 +106,9 @@
         }.bind(this));
     };
 
-    /******************************************************************************/
-    /********************************* PRIVATE ************************************/
-    /******************************************************************************/
+    /** ****************************************************************************/
+    /** ******************************* PRIVATE ************************************/
+    /** ****************************************************************************/
 
     var setTimeSlider = function setTimeSlider() {
         var now = new Date();
@@ -116,13 +116,13 @@
         var value = (1000 * 60 * 60 * 24 * 31 * 12);
 
         this.permanentMarks.start = {
-            start : new Date(now.getTime() - value),
-            content : "Start",
+            start: new Date(now.getTime() - value),
+            content: "Start",
             editable: "yes"
         };
         this.permanentMarks.end = {
-            start : now,
-            content : "End",
+            start: now,
+            content: "End",
             editable: "yes"
         };
 
@@ -159,7 +159,7 @@
 
         var span = document.createElement('span');
         span.textContent = msg;
-        this.errorBoard.setAttribute("class", typeList[type]["class"]);
+        this.errorBoard.setAttribute("class", typeList[type].class);
 
         if (this.errorBoard.hasChildNodes()) {
             this.errorBoard.replaceChild(icon, this.errorBoard.childNodes[0]);
@@ -169,10 +169,10 @@
             this.errorBoard.appendChild(span);
         }
         window.setTimeout(function () {
-                this.errorBoard.classList.add("msgHide");
-                span.classList.add("msgHide");
-                icon.classList.add("msgHide");
-            }, 1000 * this.dessapearTime);
+            this.errorBoard.classList.add("msgHide");
+            span.classList.add("msgHide");
+            icon.classList.add("msgHide");
+        }, 1000 * this.dessapearTime);
     };
 
     var setControlPanel = function setControlPanel() {
@@ -265,7 +265,7 @@
         }
     };
 
-    /******************************** HANDLERS ************************************/
+    /** ****************************** HANDLERS ************************************/
 
     // http://almende.github.io/chap-links-library/js/timeline/doc/jsdoc/symbols/links.Timeline.html
     var handlerMarkInsertInput = function handlerMarkInsertInput(markString) {
@@ -415,7 +415,6 @@
     var handlerClickIcon = function handlerClickIcon(e) {
         var itemList = this.timeSlider.getData();
         var j;
-        var item;
         for (var i = 0; i < itemList.length - 2; i++) {
             j = i + 2;
             toggleClass.call(this, itemList[j], "imageHidden");
@@ -426,7 +425,7 @@
         e.currentTarget.classList.toggle("icon-eye-open");
     };
 
-/********************************** AUXILIAR *********************************/
+/** ******************************** AUXILIAR *********************************/
 
     var getDateInput = function getDateInput(date) {
         return date.getUTCFullYear() + "-" + fixValue(date.getUTCMonth() + 1) + "-" + fixValue(date.getUTCDate());
@@ -435,7 +434,7 @@
     var getTimeInput = function getTimeInput(date) {
         return fixValue(date.getUTCHours()) + ":" + fixValue(date.getUTCMinutes()) + ":" + fixValue(date.getUTCSeconds());
     };
-    
+
     var getLocalDateInput = function getLocalDateInput(date) {
         return date.getFullYear() + "-" + fixValue(date.getMonth() + 1) + "-" + fixValue(date.getDate());
     };
@@ -443,7 +442,7 @@
     var getLocalTimeInput = function getLocalTimeInput(date) {
         return fixValue(date.getHours()) + ":" + fixValue(date.getMinutes()) + ":" + fixValue(date.getSeconds());
     };
-    
+
     var fixValue = function fixValue(number) {
         return number < 10 ? "0" + number : number;
     };
@@ -454,7 +453,7 @@
         changeOpacity.call(this);
     };
 
-/********************************** Classes *********************************/
+/** ******************************** Classes *********************************/
 
     var changeOpacity = function changeOpacity() {
         // Get list out of the limits:
@@ -506,7 +505,6 @@
     var removeClass = function removeClass(item, styleClass) {
         var pattern = styleClass;
         var string = item.className;
-        var pos;
 
         if (string && string.search(pattern) > -1) {
             string = string.replace(pattern, "");
